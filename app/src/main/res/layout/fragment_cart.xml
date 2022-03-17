@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/cart"
+            android:textSize="30sp"
+            android:paddingStart="150dp"
+            android:paddingEnd="150dp"
+            android:gravity="center"
+            app:drawableEndCompat="@drawable/cart"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"/>
+
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:textSize="18sp"
+                android:text="@string/product_id"
+                android:background="@drawable/edittext_bg"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/black"/>
+
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:textSize="18sp"
+                android:text="@string/product_name"
+                android:background="@drawable/edittext_bg"
+                android:singleLine="true"
+                android:gravity="center"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_weight="0.8"
+                android:singleLine="true"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:textSize="18sp"
+                android:text="@string/price"
+                android:background="@drawable/edittext_bg"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/cartview"/>
+
+        <TextView
+            android:id="@+id/checkout"
+            android:layout_margin="10dp"
+            android:text="@string/checkout"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:elevation="5dp"
+            android:background="@drawable/button_bg"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+    </LinearLayout>
+
+</FrameLayout>

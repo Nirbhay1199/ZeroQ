@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductsScanned"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:textSize="18sp"
+                android:text="@string/product_id"
+                android:background="@drawable/edittext_bg"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/black"/>
+
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:textSize="18sp"
+                android:text="@string/product_name"
+                android:background="@drawable/edittext_bg"
+                android:singleLine="true"
+                android:gravity="center"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_weight="0.9"
+                android:singleLine="true"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:textSize="18sp"
+                android:text="@string/price"
+                android:background="@drawable/edittext_bg"
+                android:layout_marginEnd="50dp"
+                android:gravity="center"
+                android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/black"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_product"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>
